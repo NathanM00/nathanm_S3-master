@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tv_titulo;
-    EditText et_altura, et_masa;
+    TextView tv_datos,tv_tuIMC;
+    EditText et_altura, et_masa, et_imc;
     Button   btn_calcular;
 
     @Override
@@ -19,9 +19,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tv_titulo=findViewById(R.id.tv_titulo);
+        tv_datos=findViewById(R.id.tv_datos);
+        tv_tuIMC=findViewById(R.id.tv_tuIMC);
         et_masa=findViewById(R.id.et_masa);
         et_altura=findViewById(R.id.et_altura);
+        et_imc=findViewById(R.id.et_imc);
         btn_calcular=findViewById(R.id.btn_calcular);
 
         btn_calcular.setOnClickListener(new View.OnClickListener() {
@@ -36,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 float alturaI2 = alturaI/100;
                 float calculo = masaI/(alturaI2*alturaI2);
 
-                tv_titulo.setText("Tu IMC es de: " + calculo);
+                et_imc.setText(""+calculo);
 
-                Toast.makeText(MainActivity.this, "Hola "+calculo, Toast.LENGTH_SHORT).show();;
+                Toast.makeText(MainActivity.this, ""+calculo, Toast.LENGTH_SHORT).show();;
 
             }
         });

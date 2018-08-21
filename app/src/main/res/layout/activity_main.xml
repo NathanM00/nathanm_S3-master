@@ -3,51 +3,101 @@
     android:layout_height = "match_parent"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#66B2FF"
+    android:background="#0D66A7"
     android:gravity="center_horizontal">
 
 <!-- Aqui van nuestro componentes, asi se comenta -->
-    <TextView
+
+    <!-- el id es para identificar el edit text -->
+
+    <ImageView
+        android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Escriba sus datos"
-        android:textSize="18sp"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:textColor="#ffffff"
-        android:id="@+id/tv_titulo"
+        android:src="@drawable/logo"
         />
-    <!-- el id es para identificar el edit text -->
+
     <EditText
         android:id="@+id/et_masa"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="#1f4a74"
-        android:hint="Escriba su masa (Kg)"
-        android:padding="10dp"
-        android:textColorHint="#ccc"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bordes"
+        android:hint="Masa (Kg)"
+        android:padding="15dp"
+        android:textColorHint="#efefef"
         android:textColor="#ffffff"
         />
     <EditText
         android:id="@+id/et_altura"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="#1f4a74"
-        android:hint="Escriba su Altura (Cm)"
-        android:padding="10dp"
-        android:textColorHint="#ccc"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bordes"
+        android:hint="Altura (Cm)"
+        android:padding="15dp"
+        android:textColorHint="#efefef"
         android:textColor="#ffffff"
         />
-    <Button
-        android:layout_width="wrap_content"
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Introduce los datos para calcular tu IMC"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_datos"
+        android:gravity="center"
+        />
+
+    <Button
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bordes"
         android:text="calcular"
         android:id="@+id/btn_calcular"
-        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:textColorHint="#efefef"
+        android:textColor="#ffffff"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tu IMC es"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_tuIMC"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <EditText
+        android:id="@+id/et_imc"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/bordes"
+        android:hint="0"
+        android:padding="15dp"
+        android:textColorHint="#efefef"
+        android:textColor="#ffffff"
         />
 
 </LinearLayout>
