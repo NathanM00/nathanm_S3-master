@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height = "match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#66B2FF"
+    android:gravity="center_horizontal">
+
+<!-- Aqui van nuestro componentes, asi se comenta -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escriba sus datos"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_titulo"
+        />
+    <!-- el id es para identificar el edit text -->
+    <EditText
+        android:id="@+id/et_masa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#1f4a74"
+        android:hint="Escriba su masa (Kg)"
+        android:padding="10dp"
+        android:textColorHint="#ccc"
+        android:textColor="#ffffff"
+        />
+    <EditText
+        android:id="@+id/et_altura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#1f4a74"
+        android:hint="Escriba su Altura (Cm)"
+        android:padding="10dp"
+        android:textColorHint="#ccc"
+        android:textColor="#ffffff"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calcular"
+        android:id="@+id/btn_calcular"
+        android:layout_marginTop="10dp"
+        />
+
+</LinearLayout>
